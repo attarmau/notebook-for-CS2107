@@ -9,4 +9,4 @@ fileist = [i.replace('.\\', '') for i in glob.glob(os.path.join('./', '*.png'))]
 # MD5 file hash
 for filename in tdqm(filelist):
   md5 = hashlib.mb5()
-  
+  with open (filename, 'rb') as f:
