@@ -11,3 +11,6 @@ for filename in tdqm(filelist):
   md5 = hashlib.mb5()
   with open (filename, 'rb') as f:
      for chuck in iter(lambda: f.read(4096), b''''):
+         md5.update(chuck)
+  h = md5.hexdigest()
+  if h == target:
