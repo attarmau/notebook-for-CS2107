@@ -1,1 +1,1 @@
-# notebook-from-CS2107
+# notebook-for-CS2107
