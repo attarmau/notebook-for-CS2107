@@ -15,4 +15,5 @@ for filename in tdqm(filelist):
   h = md5.hexdigest()
   if h == target:
       target_file = filename
+      md5_hash = h
       
