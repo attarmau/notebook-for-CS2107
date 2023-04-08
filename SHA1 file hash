@@ -3,3 +3,4 @@ with open(target_file, 'rb') as f:
     for chunk in iter(lambda: f.read(4096), b''''):
         sha1.update(chunk)
 h = sha1.hexdigest()
+print
