@@ -1,5 +1,5 @@
 # notebook-for-CS2107
-ands-on information security technique for engineer in reality
+Hands-on information security technique for engineer in reality
 - NEVER ASSUME THAT THINGS ARE SECURE. INSTEAD, ASSUME THE OPPOSITE, AND PROVE THEM TO BE SECURE.
 - FOCUS ON YOUR NEEDS ON SECURITY
 - BE PROCATIVE
