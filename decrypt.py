@@ -13,3 +13,4 @@ cdef decrypt():
         if ch in letters:
             position = letters.find(ch)
             new_pos = (position - k) % 26
+            new_char = letters[new_pos]
