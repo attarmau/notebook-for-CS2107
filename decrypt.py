@@ -10,7 +10,3 @@ cdef decrypt():
     decrypted_message = ""
     for ch in encrypted_message:
 
-        if ch in letters:
-            position = letters.find(ch)
-            new_pos = (position - k) % 26
-            new_char = letters[new_pos]
