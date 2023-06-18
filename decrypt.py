@@ -15,3 +15,4 @@ cdef decrypt():
             new_pos = (position - k) % 26
             new_char = letters[new_pos]
 
+# Given a string message and a secret key key, write a Python function to encrypt the message using the Caesar cipher
