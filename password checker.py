@@ -32,4 +32,4 @@ with open('passwords.txt', 'r') as file:
 for password in passwords:
     password = password.strip()  # Remove newline character if present
     strength = check_password_strength(password)
-    print(f"Password: {password}\tStrength: {strength}")
+    print(f"Password: {password}\tStrength: {strength}")                                                                                                 
