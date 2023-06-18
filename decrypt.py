@@ -16,3 +16,8 @@ cdef decrypt():
             new_char = letters[new_pos]
 
 # Given a string 'message' and a secret key 'key', write a Python function to encrypt the message using the Caesar cipher
+
+message = "HELLO"
+key = 3
+encrypted_message = caesar_cipher_encrypt(message, key)
+print(encrypted_message)  # Output: "KHOOR"
