@@ -26,11 +26,9 @@ def check_password_strength(password):
             return 'Weak'
     return 'Strong'
                                                                                                             
-# Read passwords from a text file
 with open('passwords.txt', 'r') as file:
     passwords = file.readlines()
 
-# Check strength for each password
 for password in passwords:
     password = password.strip()  # Remove newline character if present
     strength = check_password_strength(password)
