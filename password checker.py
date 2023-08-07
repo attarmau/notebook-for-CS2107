@@ -16,13 +16,11 @@ def check_password_strength(password):
     # Minimum length check
     if len(password) < 8:
         return 'Weak'
-                                                                                                            
-    # Character combination check
+
     if not re.search(r"[a-z]", password) or not re.search(r"[A-Z]", password) or \
             not re.search(r"\d", password) or not re.search(r"[!@#$%^&*]", password):
         return 'Weak'
 
-    # Common words or patterns check
     common_patterns = ['password', '12345678', 'qwerty']
     for pattern in common_patterns:
         if pattern in password:
