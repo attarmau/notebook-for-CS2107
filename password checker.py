@@ -13,7 +13,6 @@ import re #regular expressions : pattern matching and manipulation of strings.
 - re.sub(pattern, repl, string): Replaces occurrences of the pattern in the string with a specified replacement.
                                                                                                             
 def check_password_strength(password):
-    # Minimum length check
     if len(password) < 8:
         return 'Weak'
 
