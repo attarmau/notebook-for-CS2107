@@ -5,12 +5,12 @@
 - It should not contain common words or patterns commonly used in passwords (such as "password", "12345678", "qwerty", etc.).
 - The program should output the strength of each password as 'Weak', 'Medium', or 'Strong'."
 
-import re #regular expressions : pattern matching and manipulation of strings. 
-
 - re.search(pattern, string): Searches for a specified pattern in a string and returns a match object if found.
 - re.match(pattern, string): Checks if the pattern matches at the beginning of the string and returns a match object if found.
 - re.findall(pattern, string): Returns all non-overlapping occurrences of the pattern in the string as a list.
 - re.sub(pattern, repl, string): Replaces occurrences of the pattern in the string with a specified replacement.
+
+import re #regular expressions : pattern matching and manipulation of strings. 
                                                                                                             
 def check_password_strength(password):
     if len(password) < 8:
