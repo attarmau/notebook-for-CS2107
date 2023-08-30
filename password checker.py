@@ -1,7 +1,6 @@
 # Question: "You have a text file containing a list of passwords that needs to be checked for their strength. Implement a Python program that reads the file and determines the strength of each password based on the following criteria:
 
 
-
 - re.search(pattern, string): Searches for a specified pattern in a string and returns a match object if found.
 - re.match(pattern, string): Checks if the pattern matches at the beginning of the string and returns a match object if found.
 - re.findall(pattern, string): Returns all non-overlapping occurrences of the pattern in the string as a list.
