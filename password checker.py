@@ -1,9 +1,6 @@
 # Question: "You have a text file containing a list of passwords that needs to be checked for their strength. Implement a Python program that reads the file and determines the strength of each password based on the following criteria:
 
-- The password must be at least 8 characters long.
-- It must contain a combination of letters (both uppercase and lowercase), numbers, and special characters (!, @, #, $, %, ^, &, *).
-- It should not contain common words or patterns commonly used in passwords (such as "password", "12345678", "qwerty", etc.).
-- The program should output the strength of each password as 'Weak', 'Medium', or 'Strong'."
+
 
 - re.search(pattern, string): Searches for a specified pattern in a string and returns a match object if found.
 - re.match(pattern, string): Checks if the pattern matches at the beginning of the string and returns a match object if found.
