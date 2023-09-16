@@ -13,15 +13,3 @@ def caesar_cipher_decrypt(encrypted_message, key):
 
     return decrypted_message
 
-# Example usage:
-encrypted_message = input("Enter the encrypted message: ").strip()
-key = int(input("Enter the key: "))
-decrypted_message = caesar_cipher_decrypt(encrypted_message, key)
-print("Decrypted message:", decrypted_message)
-
-# Given a string 'message' and a secret key 'key', write a Python function to encrypt the message using the Caesar cipher
-
-message = "HELLO"
-key = 3
-encrypted_message = caesar_cipher_encrypt(message, key)
-print(encrypted_message)  # Output: "KHOOR"
