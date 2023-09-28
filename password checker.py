@@ -10,8 +10,6 @@
 - It should not contain common words or patterns commonly used in passwords (such as "password", "12345678", "qwerty", etc.).
 - The program should output the strength of each password as 'Weak', 'Medium', or 'Strong'."
 
-import re   
-
 def check_password_strength(password):
     if len(password) < 8:
         return 'Weak'
