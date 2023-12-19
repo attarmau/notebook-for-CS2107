@@ -10,4 +10,7 @@ classification:
 類別變數: https://varsellcm.r-forge.r-project.org/
 數值變數：kmeans
 
-res_with2 <- 
+res_with2 <- VarSelCluster(df_model_sub, vbleSelec = F, gvals = 5,
+                    crit.varsel = 'BIC, nbcores = 5)
+# res_with2 %>% saveRDS('mod/mod_5_Q + 單價G.rds')
+結果可以用shiny看
