@@ -5,3 +5,9 @@ Hands-on information security technique for engineer in reality
 - FOCUS ON YOUR NEEDS ON SECURITY
 - BE PROCATIVE
 <img width="617" alt="截圖 2023-04-07 上午7 42 27" src="https://user-images.githubusercontent.com/87364730/230513038-d5889ebf-28f6-49b2-879b-6e4df8e151fb.png">
+
+classification:
+類別變數: https://varsellcm.r-forge.r-project.org/
+數值變數：kmeans
+
+res_with2 <- 
