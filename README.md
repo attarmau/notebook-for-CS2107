@@ -17,3 +17,5 @@ res_with2 <- VarSelCluster(df_model_sub, vbleSelec = F, gvals = 5,
 結果可以用shiny看
 VarSelShiny(res_with2)
 
+取分群用這個
+res_with2@partitions@zMAP
