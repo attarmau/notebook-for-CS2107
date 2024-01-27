@@ -9,7 +9,7 @@ def power_modulo(m, k, n):
     else:
         return (m * power_modulo(m, k - 1, n)) % n
     
-num_line = int(sys.stdin.readline())
+num_line = int(sys.stdin.readline()) # automatically run the dataset
 for _ in range(num_line):
     a = [int(s) for s in sys.stdin.readline().split()]
     m, k, n = a[0], a[1], a[2]
