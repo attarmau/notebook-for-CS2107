@@ -12,3 +12,5 @@ arr = np.arange(1, 10)
 q7_3x3_arr = arr.reshape((3,3))
 q7_array = q7_3x3_arr[::-1, ::-1]
 print(q7_array)
+
+# dynamic_array: 
