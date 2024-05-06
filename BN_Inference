@@ -31,3 +31,14 @@ cpd_C = TabularCPD(variable='C', variable_card=2,
 
 # Step 3: Create the Bayesian Network
 model.add_cpds(cpd_F, cpd_M, cpd_R, cpd_B, cpd_S, cpd_Y, cpd_C)
+
+# Create an instance of VariableElimination for performing inference
+inference = VariableElimination(model)
+
+# Compute the probability distribution of C given evidence that B=1
+prob_C_given_B1 = inference.query(variables=['C'], evidence={'B': 1})
+
+# Extract the probability of C=0 from the computed distribution
+prob_C0_given_B1 = prob_C_given_B1.values[0]
+
+print("Probability of C=0 given B=1:", prob_C0_given_B1)
