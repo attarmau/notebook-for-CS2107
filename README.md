@@ -20,3 +20,6 @@ VarSelShiny(res_with2)
 
 取分群用這個
 res_with2@partitions@zMAP
+
+## Bayesian Network
+<img width="1101" alt="Screenshot 2024-05-03 at 4 05 48 PM" src="https://github.com/attarmau/notebook-for-CS2107/assets/87364730/b1176de3-b102-46b5-85c3-448fe668d3b3">
