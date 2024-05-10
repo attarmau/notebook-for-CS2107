@@ -42,3 +42,60 @@ print(heroes)
 glove_url = "http://nlp.stanford.edu/data/glove.6B.zip"
 destination_file_path = "glove.6B.zip"
 urllib.request.urlretrieve(glove_url, destination_file_path)
+
+zip_file_path = "glove.6B.zip"
+extracted_dir = "glove_embeddings"
+
+if not os.path.exists(extracted_dir):
+    os.makedirs(extracted_dir)
+
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    zip_ref.extractall(extracted_dir)
+
+glove_file_path = os.path.join(extracted_dir, "glove.6B.100d.txt")
+if os.path.exists(glove_file_path):
+    print("GloVe embeddings file extracted successfully:", glove_file_path)
+else:
+    print("Error: GloVe embeddings file not found.")
+
+# Use pre-trained GloVe embeddings to do feature engineering 
+glove_path = 'glove_embeddings/glove.6B.100d.txt'
+glove_embeddings = {}
+with open(glove_path, 'r', encoding='utf-8') as f:
+    for line in f:
+        values = line.split()
+        word = values[0]
+        vector = np.array(values[1:], dtype='float32')
+        glove_embeddings[word] = vector
+
+def normalize_embeddings(embeddings):
+    norms = np.linalg.norm(list(embeddings.values()), axis=-1, keepdims=True)
+    normalized_embeddings = {word: np.clip(embedding / norms[i], 0, None) for i, (word, embedding) in enumerate(embeddings.items())}
+    return normalized_embeddings
+
+def min_max_normalize(embeddings):
+    min_val = np.min(embeddings)
+    max_val = np.max(embeddings)
+    return (embeddings - min_val) / (max_val - min_val)
+
+glove_embeddings_normalized = normalize_embeddings(glove_embeddings)
+
+# Tokenize text in train data using spaCy
+nlp = spacy.load('en_core_web_sm')
+tokenized_text = [nlp(text) for text in X_train]
+
+# Map tokens to GloVe embeddings
+embedded_text = []
+for doc in tokenized_text:
+    embedded_doc = []
+    for token in doc:
+        if token.text in glove_embeddings:
+            embedded_doc.append(glove_embeddings_normalized[token.text])
+        else:
+            pass
+    embedded_text.append(embedded_doc)
+
+max_seq_length = 100  
+X_train_padded = pad_sequences(embedded_text, maxlen=max_seq_length, dtype='float32', padding='post', truncating='post')
+
+X_train_glove = np.array(X_train_padded)
