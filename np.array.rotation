@@ -34,4 +34,11 @@ print(heros)
 
 # 5. Sort the list in alphabetical order
 heros.sort()
-print(heros)
+print(heroes)
+
+
+# Download Glove
+
+glove_url = "http://nlp.stanford.edu/data/glove.6B.zip"
+destination_file_path = "glove.6B.zip"
+urllib.request.urlretrieve(glove_url, destination_file_path)
